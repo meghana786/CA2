@@ -5,12 +5,12 @@ body{
     height: 85vh;
 }
 .app{
-    background: rgba(44, 123, 143, 0.74);
+    background: rgba(247, 157, 157, 0.9);
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
     border-radius: 10px;
-    padding:30px ;
+    padding:15px ;
   }
 .header{
     font-size: 30px;
@@ -18,14 +18,14 @@ body{
     border-bottom: 1px solid #080707;
     text-align: center;
   }
-  
 .quiz{
     padding: 20px 0;
   }
 .quiz h2{
-    font-size: 25px;
-    color: rgb(18, 58, 201);
-    text-align: center;
+    font-size: 28px;
+    color: rgb(0, 0, 255);
+    text-align: left;
+    font-weight: bold;
   }
 .btn{
     background: white;
@@ -45,6 +45,7 @@ body{
     background-color:rgb(8, 230, 193);
     color: white;
   }
+
   .msg{
     font-weight: bold;
     color: rgb(72, 0, 239);
@@ -67,8 +68,9 @@ body{
 #msg{
   color: red;
   display: none;
-  font-size: 25px;
+  font-size: 40px;
   text-align: center;
+  font-weight: bold;
 }
 
 .header img{
@@ -93,17 +95,13 @@ body{
         height: 77vh;
      }
      #question{
-      font-size: 30px;
+      font-size: 25px;
      }
      .header img{
       margin-top: 20px;
     }
     .btn{
-      font-size: 15px;
-    }
-    .question{
       font-size: 20px;
     }
-
 }
   
