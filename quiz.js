@@ -31,8 +31,8 @@ const questions=[
       answers: [
         { text:'script',correct:false},
         { text:'css',correct:false},
-        { text:'style',correct:true},
-        { text:'link',correct:false},
+        { text:'style',correct:false},
+        { text:'link',correct:true},
       ]
     },
     {
