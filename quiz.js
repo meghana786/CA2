@@ -95,6 +95,7 @@ const questionElement = document.getElementById("question");
 const answerbtns = document.getElementById("answerbtns");
 const nextbtn = document.getElementById("nextbtn");
 const timerElement = document.getElementById("timer");
+const timelogo=document.getElementById("timelogo");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -198,6 +199,7 @@ function showScore() {
     msg.style.display = "block";
 
     timerElement.style.display="none";
+    timelogo.style.display="none";
     msg.textContent = winMessages[randomIndex];
     winMusic.play();
   }
@@ -206,12 +208,14 @@ function showScore() {
     let randomIndex = Math.floor(Math.random() * mediumMessages.length);
     msg.style.display = "block";
     timerElement.style.display="none";
-    msg.textContent = winMessages[randomIndex];
+    timelogo.style.display="none";
+    msg.textContent = mediumMessages[randomIndex];
   }
   else {
     let randomIndex = Math.floor(Math.random() * lossMessages.length);
     msg.style.display = "block";
     timerElement.style.display="none";
+    timelogo.style.display="none";
     msg.textContent = lossMessages[randomIndex];
   }
   nextbtn.innerHTML = "Play Again";
