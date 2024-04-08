@@ -109,6 +109,7 @@ function startQuiz() {
   nextbtn.innerHTML = "Next";
   backgroundMusic.play();
   showQuestion();
+  resetTimer();
   startTimer(10);
 }
 
@@ -180,7 +181,7 @@ function selectAnswer(e) {
   nextbtn.style.display = "block";
 }
 
-let winMessages = ["Congratulations! Keep it up!", "You are a champion!","Keep it up"];
+let winMessages = ["Congratulations! Keep it up!", "You are a champion!","WOW!! Keep it up"];
 let mediumMessages=["Keep practicing", "Well done, keep improving!", "You're on the right track!"];
 let lossMessages = ["Nice try! Better luck next time.", "Don't give up, try again!", "Keep learning and growing!"];
 
@@ -188,11 +189,14 @@ const msg = document.getElementById("msg");
 function showScore() {
   backgroundMusic.pause();
   resetState();
-  questionElement.innerHTML = `Your scored ${score} out of ${questions.length}!`;
+  questionElement.innerHTML = `Your score is ${score} out of ${questions.length}!`;
+  localStorage.setItem("score",score);
+  questionElement.style.fontWeight='bold';
 
   if (score > 8) {
     let randomIndex = Math.floor(Math.random() * winMessages.length);
     msg.style.display = "block";
+
     timerElement.style.display="none";
     msg.textContent = winMessages[randomIndex];
     winMusic.play();
