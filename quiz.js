@@ -242,6 +242,7 @@ nextbtn.addEventListener("click", () => {
     startQuiz();
     msg.style.display = "none";
     timerElement.style.display="block";
+    timelogo.style.display="inline";
     backgroundMusic.play();
     winMusic.pause();
   }
